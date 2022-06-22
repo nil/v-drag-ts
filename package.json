@@ -1,0 +1,18 @@
+{
+  "name": "v-drag-ts",
+  "version": "1.0.0",
+  "description": "",
+  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node esbuild.build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.14.47",
+    "typescript": "^4.7.4"
+  }
+}
