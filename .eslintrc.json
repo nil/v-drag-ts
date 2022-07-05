@@ -11,5 +11,11 @@
   "env": {
     "browser": true,
     "node": true
+  },
+  "rules": {
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-restricted-syntax": ["error", "BinaryExpression[operator='in']"],
+    "no-underscore-dangle": ["error", { "allow": ["__vnode"] }],
+    "no-param-reassign": ["error", { "props": false }]
   }
 }

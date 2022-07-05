@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { build } from 'esbuild';
+const { build } = require('esbuild');
 
 const sharedConfig = {
-  entryPoints: ['src/app.ts'],
+  entryPoints: ['src/index.ts'],
   bundle: true,
   minify: true,
 };
