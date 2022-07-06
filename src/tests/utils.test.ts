@@ -1,6 +1,18 @@
-import { defaultOptions, deepMerge } from '../index';
+import { defaultOptions, deepMerge, objectDeepKeys } from '../index';
 
 describe('Utils', () => {
+  describe('objectDeepKeys', () => {
+    test('One level', () => {
+      expect(objectDeepKeys({ a: 1, b: 2 })).toEqual(['a', 'b']);
+    });
+    test('Two levels', () => {
+      expect(objectDeepKeys({ a: 1, b: { c: 2 } })).toEqual(['a', 'b', 'c']);
+    });
+    test('Emtpy object', () => {
+      expect(objectDeepKeys({})).toEqual([]);
+    });
+  });
+
   describe('deepMerge', () => {
     test('Replace value, superficial level', () => {
       const object = deepMerge(defaultOptions, { axis: 'x' });
